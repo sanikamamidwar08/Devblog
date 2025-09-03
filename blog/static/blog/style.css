@@ -1,0 +1,72 @@
+/* 🌐 Base styling */
+body {
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+/* 📝 Blog Titles */
+h1, h2 {
+  color: #005a9c;
+  font-weight: 600;
+}
+
+/* 📦 Article Cards */
+article {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+}
+
+/* 🔗 Links */
+a {
+  text-decoration: none;
+  color: #005a9c;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #003f6f;
+  text-decoration: underline;
+}
+
+/* 📌 Navbar Customization */
+.navbar {
+  border-radius: 0 0 15px 15px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar a.btn {
+  border-radius: 6px;
+}
+
+/* 📩 Forms */
+form input, form textarea {
+  border-radius: 8px !important;
+  border: 1px solid #cccccc;
+}
+
+form button {
+  border-radius: 8px !important;
+  font-weight: 600;
+}
+
+/* ✅ Success & Alert Boxes */
+.alert {
+  border-radius: 12px;
+  font-size: 1.1rem;
+}
