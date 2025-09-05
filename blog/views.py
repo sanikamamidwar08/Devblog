@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import ContactForm
 from .models import Post
+from django.http import JsonResponse
 
 # 📝 All blog posts list
 def post_list(request):
@@ -36,3 +37,18 @@ def contact(request):
 # ✅ Success page
 def contact_success(request):
     return render(request, 'blog/contact_success.html')
+
+#api function
+def post_list_api(request):
+    all_posts = Post.objects.all()
+    context = {'all_the_posts': all_posts}
+    data = {
+        "posts": 
+            list(all_posts.values(
+                'pk', 
+                'title', 
+                'content', 
+                'author__username', 
+                'created_at'))
+    }
+    return JsonResponse(data)
