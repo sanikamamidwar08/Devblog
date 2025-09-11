@@ -88,7 +88,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 DATABASE_URL = os.environ.get('DATABASE_URL',
 f'sqlite: {os.path.join(BASE_DIR, "db.sqlite3")}')
 DATABASES = {
-'default': dj_database_url.confg(default=DATABASE_URL)
+'default': dj_database_url.config(default=DATABASE_URL)
 }
 
 
