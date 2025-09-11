@@ -11,7 +11,7 @@ def post_list(request):
 # 📄 Single post details
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    return render(request, 'blog/post_details.html', {'post': post})
 
 # 📩 Contact form
 def contact(request):
